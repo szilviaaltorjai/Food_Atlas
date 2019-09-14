@@ -1,4 +1,5 @@
-# Food_Atlas repository includes the current version of the Food Environment Atlas, published by the US Department of Agriculture, 
+# Food_Atlas 
+repository includes the current version of the Food Environment Atlas, published by the US Department of Agriculture, 
 Economic Research Service as of September 2019. Data source: 
 https://www.ers.usda.gov/data-products/food-environment-atlas/data-access-and-documentation-downloads/
 
