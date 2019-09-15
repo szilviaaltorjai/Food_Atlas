@@ -32,7 +32,7 @@ trace = go.Scatter(
 
 data = [trace]
 layout = go.Layout(
-    title = 'Scatterplot of poverty rates and proportion of adults with diabetes, US counties', # Graph title
+    title = f'Scatterplot of poverty rates and proportion of adults with diabetes, US counties', # Graph title
     xaxis = dict(title = 'Poverty rates'), # x-axis label
     yaxis = dict(title = 'Proportion of adults with diabetes'), # y-axis label
     hovermode ='closest' # handles multiple points landing on the same vertical
