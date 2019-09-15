@@ -25,6 +25,7 @@ app.title=tabtitle
 app.layout = html.Div(children=[
     html.H1(myheading1),
     html.H2(myheading2),
+    html.H3(myheading3),
     html.Div([
         html.Div([
             html.Img(src=app.get_asset_url(image1), style={'width': '75%', 'height': 'auto'})
