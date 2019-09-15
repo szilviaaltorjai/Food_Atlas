@@ -10,9 +10,9 @@ tabtitle = 'the district'
 myheading1 = 'Food Atlas'
 myheading2 = 'Diabetes in US counties'
 image1 = 'Hist_diabetes.jpg'
-image2 = 'Pov_diabetes.jpg'
+image2 = 'Pov_Diabetes.jpg'
 image3 = 'Diabetes_Pov_Foodtax.jpg'
-sourceurl = 'https://www.ers.usda.gov/data-products/food-environment-atlas/data-access-and-documentation-downloads/'
+sourceurl = 'https://www.ers.usda.gov'
 githublink = 'https://github.com/szilviaaltorjai/Food_Atlas'
 
 ########### Initiate the app
@@ -30,13 +30,12 @@ app.layout = html.Div(children=[
             html.Img(src=app.get_asset_url(image1), style={'width': '50%', 'height': 'auto'})
         ],className='three columns'),
         html.Div([
-            html.Img(src=app.get_asset_url(image2), style={'width': '80%', 'height': 'auto'}),
+            html.Img(src=app.get_asset_url(image2), style={'width': '50%', 'height': 'auto'}),
         ],className='three columns'),
         html.Div([
             html.Img(src=app.get_asset_url(image3), style={'width': '50%', 'height': 'auto'})
         ],className='three columns'),
-        ],className='six columns'),
-    ],className='twelve columns'),
+    ],className='nine columns'),
     html.A('Code on Github', href=githublink),
     html.Br(),
     html.A("Data Source", href=sourceurl),
