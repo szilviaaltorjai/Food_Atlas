@@ -6,41 +6,35 @@ import pandas as pd
 
 ########### Define your variables ######
 
-tabtitle = 'DC Housing'
-myheading='Analysis of housing prices in Washington DC'
-neighborhood='Petworth'
+tabtitle = 'Diabetes and poverty'
+myheading='Scatter of diabetes and poverty in US counties'
 color1='#04F9E6'
 color2='#1B03B1'
 sourceurl = 'https://www.kaggle.com/christophercorrea/dc-residential-properties/'
-githublink = 'https://github.com/austinlasseter/dash-scatterplot-housing'
+githublink = 'https://github.com/szilviaaltorjai/Food_Atlas'
 
 ########### Prepare the dataframe
-df = pd.read_csv('DC_Properties.csv')
-df=df[df['ASSESSMENT_NBHD']==neighborhood]
-df=df[(df['PRICE']<=1000000) & (df['PRICE']>=10000)]
-df=df[df['LANDAREA']<4000]
-df=df[df['PRICE']<900000]
-df=df[df['BEDRM']<8]
+df = pd.read_csv('Food_clean.csv')
 
 ########### Set up the chart
 trace = go.Scatter(
-    x = df['LIVING_GBA'],
-    y = df['PRICE'],
+    x = df['POVRATE15'],
+    y = df['PCT_DIABETES_ADULTS13'],
     mode = 'markers',
     marker=dict(
         size=8,
-        color = df['BATHRM'], # set color equal to a third variable
+        color = df['FOOD_TAX14'], # set color equal to a third variable
         colorscale=[color1, color2],
-        colorbar=dict(title='Bathrooms'),
+        colorbar=dict(title='Food tax'),
         showscale=True
     )
 )
 
 data = [trace]
 layout = go.Layout(
-    title = f'Larger homes cost more in {neighborhood}!', # Graph title
-    xaxis = dict(title = 'Sales Price'), # x-axis label
-    yaxis = dict(title = 'Square Feet'), # y-axis label
+    title = 'Scatterplot of poverty rates and proportion of adults with diabetes, US counties', # Graph title
+    xaxis = dict(title = 'Poverty rates'), # x-axis label
+    yaxis = dict(title = 'Proportion of adults with diabetes'), # y-axis label
     hovermode ='closest' # handles multiple points landing on the same vertical
 )
 fig = go.Figure(data=data, layout=layout)
