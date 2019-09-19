@@ -9,7 +9,6 @@ import pandas as pd
 tabtitle = 'Diabetes in US counties, 2013'
 myheading = 'Scatterplot of diabetes prevalence among adults and pverty rate in US counties'
 color1='#04F9E6'
-color2='#1B03B1'
 sourceurl = 'https://www.kaggle.com/christophercorrea/dc-residential-properties/'
 githublink = 'https://github.com/szilviaaltorjai/Food_Atlas'
 
@@ -22,19 +21,12 @@ trace = go.Scatter(
     x=df['POVRATE15'],
     y=df['PCT_DIABETES_ADULTS13'],
     mode = 'markers',
-    marker=dict(
-        size=8,
-        color=df['FOOD_TAX14'],
-        colorscale=[color1, color2],
-        colorbar=dict(title='Food tax'),
-        showcase=True
     )
-)
 
 data=[trace]
 layout = go.Layout(
-    title=f'Poor areas have both higher diabetes prevalence and higher food taxes.',
-    xaxis=dict(title = 'Poverty rate'),
+    title=f'Scatterplot of poverty rates and proportion of adults with diabetes, US counties',
+    xaxis=dict(title = 'Poverty rates'),
     yaxis=dict(title = 'Proportion of adults with diabetes'),
     hovermode = 'closest'
 )
