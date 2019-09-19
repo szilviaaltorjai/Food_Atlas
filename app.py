@@ -33,7 +33,7 @@ trace = go.Scatter(
 
 data=[trace]
 layout = go.Layout(
-    title=f'Poor areas have higher diabetes prevalence and higher food taxes.,
+    title=f'Poor areas have both higher diabetes prevalence and higher food taxes.',
     xaxis=dict(title = 'Poverty rate'),
     yaxis=dict(title = 'Proportion of adults with diabetes'),
     hovermode = 'closest'
