@@ -15,13 +15,15 @@ githublink = 'https://github.com/szilviaaltorjai/Food_Atlas'
 #### Prepare dataframe
 
 df = pd.read_csv('Food_clean.csv')
+df = df['POVRATE15']
+df = df['PCT_DIABETES_ADULTS13']
 
 #### Set up the chart
 trace = go.Scatter(
     x=df['POVRATE15'],
     y=df['PCT_DIABETES_ADULTS13'],
     mode = 'markers',
-    )
+)
 
 data=[trace]
 layout = go.Layout(
@@ -37,7 +39,7 @@ fig=go.Figure(data=data, layout=layout)
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 server = app.server
-app.title='FoodAtlas'
+app.title=tabtitle
 
 ########### Set up the layout
 app.layout = html.Div(children=[
