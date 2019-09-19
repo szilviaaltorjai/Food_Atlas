@@ -43,7 +43,7 @@ app.title='FoodAtlas'
 app.layout = html.Div(children=[
     html.H1(myheading),
     dcc.Graph(
-        id='figure-1',
+        id='fig',
         figure=fig
     ),
     html.A('Code on Github', href=githublink),
