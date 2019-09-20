@@ -8,7 +8,7 @@ import pandas as pd
 
 tabtitle = 'Diabetes in US counties, 2013'
 myheading = 'Scatterplot of diabetes prevalence among adults and poverty rate in US counties'
-color1='#04F9E6'
+color1='blue'
 sourceurl = 'https://www.ers.usda.gov'
 githublink = 'https://github.com/szilviaaltorjai/Food_Atlas'
 
