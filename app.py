@@ -43,11 +43,19 @@ app.title=tabtitle
 
 ########### Set up the layout
 app.layout = html.Div(children=[
-    html.H1(myheading),
-    dcc.Graph(
-        id='figure-1',
-        figure=fig
-    ),
+    html.H1(myheading1),
+    html.H2(myheading2),
+    html.Div([
+        html.Div([
+            html.Img(src=app.get_asset_url(image1), style={'width': '75%', 'height': 'auto'})
+        ],className='four columns'),
+        html.Div([
+            html.Img(src=app.get_asset_url(image2), style={'width': '75%', 'height': 'auto'}),
+        ],className='four columns'),
+        html.Div([
+            html.Img(src=app.get_asset_url(image3), style={'width': '75%', 'height': 'auto'})
+        ],className='four columns'),
+    ],className='twelve columns'),
     html.A('Code on Github', href=githublink),
     html.Br(),
     html.A("Data Source", href=sourceurl),
@@ -56,4 +64,4 @@ app.layout = html.Div(children=[
 
 ############ Deploy
 if __name__ == '__main__':
-    app.run_server()
+    app.run
