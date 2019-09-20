@@ -23,7 +23,7 @@ trace = go.Scatter(
     x=df['POVRATE15'],
     y=df['PCT_DIABETES_ADULTS13'],
     mode = 'markers',
-    )
+)
 
 data=[trace]
 layout = go.Layout(
