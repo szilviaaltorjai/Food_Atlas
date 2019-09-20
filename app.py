@@ -7,8 +7,9 @@ import pandas as pd
 ########### Define your variables ######
 
 tabtitle = 'Diabetes in US counties, 2013'
-myheading = 'Scatterplot of diabetes prevalence among adults and pverty rate in US counties'
+myheading = 'Scatterplot of diabetes prevalence among adults and poverty rate in US counties'
 color1='#04F9E6'
+color2='#1B03B1'
 sourceurl = 'https://www.kaggle.com/christophercorrea/dc-residential-properties/'
 githublink = 'https://github.com/szilviaaltorjai/Food_Atlas'
 
@@ -23,6 +24,13 @@ trace = go.Scatter(
     x=df['POVRATE15'],
     y=df['PCT_DIABETES_ADULTS13'],
     mode = 'markers',
+    marker=dict(
+        size=8,
+        color = df['FOOD_TAX14'], # set color equal to a third variable
+        colorscale=[color1, color2],
+        colorbar=dict(title='Food tax'),
+        showscale=True
+    )
 )
 
 data=[trace]
@@ -45,7 +53,7 @@ app.title=tabtitle
 app.layout = html.Div(children=[
     html.H1(myheading),
     dcc.Graph(
-        id='fig',
+        id='figure-1',
         figure=fig
     ),
     html.A('Code on Github', href=githublink),
