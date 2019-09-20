@@ -13,7 +13,7 @@ image1 = 'Hist_diabetes.jpg'
 image2 = 'Pov_diabetes.jpg'
 image3 = 'Diabetes_Pov_Foodtax.jpg'
 sourceurl = 'https://www.ers.usda.gov'
-githublink = 'https://github.com/szilviaaltorjai/Food_Atlas'
+githublink = 'https://github.com/szilviaaltorjai/Food_Atlas_test'
 
 ########### Initiate the app
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
