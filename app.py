@@ -9,7 +9,6 @@ import pandas as pd
 
 tabtitle = 'Food Atlas'
 myheading='Diabetes and poverty'
-neighborhood='counties'
 color1='#04F9E6'
 color2='#1B03B1'
 sourceurl = 'https://www.ers.usda.gov'
@@ -67,4 +66,4 @@ html.A("Data Source", href=sourceurl),
 
 ############ Deploy
 if __name__ == '__main__':
-    app.run_server()
+app.run_server()
