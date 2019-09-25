@@ -35,9 +35,9 @@ trace = go.Scatter(
 
 data = [trace]
 layout = go.Layout(
-	    title = f'Diabetes and poverty!', # Graph title
-	    xaxis = dict(title = 'Diabetes'), # x-axis label
-	    yaxis = dict(title = 'Poverty'), # y-axis label
+	    title = f'Diabetes and poverty in US counties!', # Graph title
+	    xaxis = dict(title = 'Poverty rate'), # x-axis label
+	    yaxis = dict(title = 'Proportion of adults with diabetes'), # y-axis label
 	    hovermode ='closest' # handles multiple points landing on the same vertical
 	)
 fig = go.Figure(data=data, layout=layout)
